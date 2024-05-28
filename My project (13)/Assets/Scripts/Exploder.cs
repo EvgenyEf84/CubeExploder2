@@ -15,8 +15,6 @@ public class Exploder : MonoBehaviour
         _prefab.NotDivided -= Explode;
     }
 
-
-
     public void Explode(Cube cube)
     {
         foreach (Rigidbody explorableObject in GetExplorableObjects(cube))  

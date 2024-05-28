@@ -8,14 +8,12 @@ public class Cube : MonoBehaviour
     [SerializeField] private int _separationChance = 100;
     [SerializeField] private float _explodeRadius;
     [SerializeField] private float _explodeForce ;
-
-
-    public event Action<Cube> Divided;
-    public event Action<Cube> NotDivided;
-
     private Material _material;
     private Rigidbody _rigidbody;
     private int _decreaseNumber = 2;
+
+    public event Action<Cube> Divided;
+    public event Action<Cube> NotDivided;    
 
     private void Awake()
     {
@@ -79,7 +77,7 @@ public class Cube : MonoBehaviour
 
     private void IncreaseExplodeForce()
     {
-        int increaseNumber = 3;
+        int increaseNumber = 2;
         _explodeForce *= increaseNumber;
     }
 
